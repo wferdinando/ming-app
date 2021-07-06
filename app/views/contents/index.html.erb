@@ -1,7 +1,9 @@
+  <%= link_to 'New Content', new_content_path %>
   <h1>Contents</h1>
   
   <% @contents.each do |content|  %>
     Title: <%= content.title %>
     Description: <%= content.description %>
+    <%= link_to 'Edit', edit_content_path(content) %>
     <br>
   <% end %>
